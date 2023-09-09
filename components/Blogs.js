@@ -4,7 +4,8 @@ class Blogs extends Component {
     render() {
         return (
             <div>
-                <h1>Blogs</h1>
+                <h1>Blogs:</h1>
+                <p>The author is {this.props.match.params.author}</p>
             </div>
         );
     }

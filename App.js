@@ -6,6 +6,7 @@ import Products from './components/Products';
 import Blogs from './components/Blogs';
 import AboutUs from './components/AboutUs';
 import Navbar from './components/Navbar';
+import Product from './components/Product';
 
 class App extends Component {
     render() {
@@ -14,7 +15,8 @@ class App extends Component {
                 <Navbar />
                 <div>
                     <Switch>
-                       <Route path="/blogs" render={(props) => <Blogs name="Sarok" {...props}/>}/>
+                        <Route path="/products/:id" component={Product} />
+                        <Route path="/blogs/:author?" render={(props) => <Blogs name="Sarok" {...props}/>}/>
                         <Route path="/products" component={Products} />
                         <Route path="/aboutus" component={AboutUs} />
                         <Route path="/" component={HomePage} />
